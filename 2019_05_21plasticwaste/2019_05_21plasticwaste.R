@@ -69,7 +69,7 @@ tbl_df(iso3166)
 plastic_waste_data <- plastic_waste %>%
   inner_join(iso3166, by = c("country_code" = "a3"))
 
-# plot 2
+# plot 2, world map
 map_data("world") %>%
   tbl_df() %>%
   filter(region != "Antarctica") %>%
